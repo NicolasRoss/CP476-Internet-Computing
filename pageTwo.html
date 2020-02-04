@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 1 - Page 2</title>
-
 	<link href="reset.css" rel="stylesheet">
 	<link href="assign1.css" rel="stylesheet">
-
+    <script src="assign2.js"></script>
 </head>
 <body>
     <header>    
@@ -29,7 +28,7 @@
 
     <div class="section main">
         <h2>Customer Registration</h2>
-        <form class="register" action="">
+        <form id="signUpForm" class="register" action="" onsubmit="return isValid();">
             <section>
                 <h4>1. User Info</h4>
                 <hr>
