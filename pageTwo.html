@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1 - Page 2</title>
+    <title>Assignment 2 - Page 2</title>
 	<link href="reset.css" rel="stylesheet">
 	<link href="assign1.css" rel="stylesheet">
     <script src="assign2.js"></script>
 </head>
-<body>
+<body onload="q2()">
     <header>    
         <nav class="navBar">
             <a href="#">My Account</a>
@@ -28,7 +28,7 @@
 
     <div class="section main">
         <h2>Customer Registration</h2>
-        <form id="signUpForm" class="register" action="" onsubmit="return isValid();">
+        <form id="signUpForm" class="register" action="">
             <section>
                 <h4>1. User Info</h4>
                 <hr>
@@ -101,12 +101,18 @@
                     <tr>
                         <td colspan="3" class="continent">
                             <label class="detail">Continent</label><br>
-                            <input id="northAmerica" type="radio" name="Continent">
-                            <label for="northAmerica">North America</label><br>
-                            <input id="europe" type="radio" name="Continent">
-                            <label for="europe">Europe</label><br>
-                            <input id="southAmerica" type="radio" name="Continent">
-                            <label for="southAmerica">South America</label><br>
+                            <label for="northAmerica">
+                                <input id="northAmerica" type="radio" name="Continent">
+                                North America
+                            </label><br>
+                            <label for="europe">
+                                <input id="europe" type="radio" name="Continent">
+                                Europe
+                            </label><br>
+                            <label for="southAmerica">
+                                <input id="southAmerica" type="radio" name="Continent">
+                                South America
+                            </label><br>
                         </td>
                     </tr>
                 </table>
@@ -143,7 +149,7 @@
                 <h4>4. All Done</h4>
                 <hr>
 
-                <input type="checkbox"><label>I agree to the <a href="#">Terms of the Site</a></label>
+                <input class="agreement" type="checkbox"><label class="terms">I agree to the <a href="#">Terms of the Site</a></label>
                 <br>
                 <button class="signUp" type="submit">
                     <img src="images/button_ok.png">Sign me up!</button>
