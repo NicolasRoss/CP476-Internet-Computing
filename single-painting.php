@@ -115,7 +115,7 @@ $subject = $row["SubjectName"];
             <hr>
             <div class="similarProducts">
                 <div class="section similar">
-                    <img src="images/thumbs/116010.jpg">
+                    <img src="images/square-medium/116010.jpg">
                     <a href="#">Artist Holding a Thistle</a>
                     <br>
                     <button>View</button>
@@ -123,7 +123,7 @@ $subject = $row["SubjectName"];
                     <button>Cart</button>
                 </div>
                 <div class="section similar">
-                    <img src="images/thumbs/120010.jpg">
+                    <img src="images/square-medium/120010.jpg">
                     <a href="#">Portrait of Eleanor of Toledo</a>
                     <br>
                     <button>View</button>
@@ -131,7 +131,7 @@ $subject = $row["SubjectName"];
                     <button>Cart</button>
                 </div>
                 <div class="section similar">
-                    <img src="images/thumbs/107010.jpg">
+                    <img src="images/square-medium/107010.jpg">
                     <a href="#">Madame do Pompadour</a>
                     <br>
                     <button>View</button>
@@ -139,7 +139,7 @@ $subject = $row["SubjectName"];
                     <button>Cart</button>
                 </div>
                 <div class="section similar">
-                    <img src="images/thumbs/106020.jpg">
+                    <img src="images/square-medium/106020.jpg">
                     <a href="#">Girl with a pearl Earring</a>
                     <br>
                     <button>View</button>
