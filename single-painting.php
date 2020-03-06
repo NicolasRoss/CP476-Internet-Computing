@@ -4,33 +4,34 @@ include 'functions.php';
 
 $DB = getDB();
 
-$query = "SELECT p.Title, p.ImageFileName, p.Excerpt, p.MSRP, p.YearOfWork, p.Medium, p.Height, p.Width, g.GalleryName, g.GalleryCity, g.GalleryCountry, a.FirstName, a.LastName FROM paintings p, artists a, galleries g WHERE p.ArtistID = a.ArtistID AND p.GalleryID = g.GalleryID AND p.PaintingID = ".$_GET['id']."";
-$query_result = runQuery($DB, $query);
-$row = mysqli_fetch_assoc($query_result);
-$title = $row["Title"];
-$image = $row["ImageFileName"];
-$excerpt = $row["Excerpt"];
-$msrp = $row["MSRP"];
-$first = $row["FirstName"];
-$last = $row["LastName"];
-$date = $row["YearOfWork"];
-$medium = $row["Medium"];
-$height = $row["Height"];
-$width = $row["Width"];
-$home = $row["GalleryName"];
-$city = $row["GalleryCity"];
-$country = $row["GalleryCountry"];
+if (isset($_GET["id"])) {
+	$query = "SELECT p.Title, p.ImageFileName, p.Excerpt, p.MSRP, p.YearOfWork, p.Medium, p.Height, p.Width, g.GalleryName, g.GalleryCity, g.GalleryCountry, a.FirstName, a.LastName FROM paintings p, artists a, galleries g WHERE p.ArtistID = a.ArtistID AND p.GalleryID = g.GalleryID AND p.PaintingID = ".$_GET['id']."";
+	$query_result = runQuery($DB, $query);
+	$row = mysqli_fetch_assoc($query_result);
+	$title = $row["Title"];
+	$image = $row["ImageFileName"];
+	$excerpt = $row["Excerpt"];
+	$msrp = $row["MSRP"];
+	$first = $row["FirstName"];
+	$last = $row["LastName"];
+	$date = $row["YearOfWork"];
+	$medium = $row["Medium"];
+	$height = $row["Height"];
+	$width = $row["Width"];
+	$home = $row["GalleryName"];
+	$city = $row["GalleryCity"];
+	$country = $row["GalleryCountry"];
 
-$query = "SELECT g.GenreName FROM paintings p, paintinggenres pg, genres g WHERE p.PaintingID = pg.PaintingID AND pg.GenreID = g.GenreID AND p.PaintingID = ".$_GET['id']."";
-$query_result = runQuery($DB, $query);
-$row = mysqli_fetch_assoc($query_result);
-$genre = $row["GenreName"];
+	$query = "SELECT g.GenreName FROM paintings p, paintinggenres pg, genres g WHERE p.PaintingID = pg.PaintingID AND pg.GenreID = g.GenreID AND p.PaintingID = ".$_GET['id']."";
+	$query_result = runQuery($DB, $query);
+	$row = mysqli_fetch_assoc($query_result);
+	$genre = $row["GenreName"];
 
-$query = "SELECT s.SubjectName FROM paintings p, paintingsubjects ps, subjects s WHERE p.PaintingID = ps.PaintingID AND ps.SubjectID = s.SubjectID AND p.PaintingID = ".$_GET['id']."";
-$query_result = runQuery($DB, $query);
-$row = mysqli_fetch_assoc($query_result);
-$subject = $row["SubjectName"];
-
+	$query = "SELECT s.SubjectName FROM paintings p, paintingsubjects ps, subjects s WHERE p.PaintingID = ps.PaintingID AND ps.SubjectID = s.SubjectID AND p.PaintingID = ".$_GET['id']."";
+	$query_result = runQuery($DB, $query);
+	$row = mysqli_fetch_assoc($query_result);
+	$subject = $row["SubjectName"];
+}
 ?>
 
 
