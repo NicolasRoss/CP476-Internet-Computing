@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Page 2</title>
+
+	<link href="reset.css" rel="stylesheet">
+	<link href="assign1.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>    
+        <nav class="navBar">
+            <a href="#">My Account</a>
+            <a href="#">Wish List</a>
+            <a href="#">Shopping Cart</a>
+            <a href="#">Checkout</a>
+        </nav>
+    </header>
+	
+    <h1>Art Store</h1>
+    <nav class="section navBar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Art Works</a>
+        <a href="#">Artists</a>
+    </nav>
+
+    <div class="section main">
+        <h2>Customer Registration</h2>
+        <form class="register" action="">
+            <section>
+                <h4>1. User Info</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="detail">First Name</label><br>
+                            <input type="text">                        
+                        </td>
+                        <td>
+                            <label class="detail">Last Name</label><br>
+                            <input type="text">                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label class="detail">Email</label><br>
+                            <input type="email" placeholder="format for email is xxx@yyy.zzz">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="detail">Password</label><br>
+                            <input type="password" placeholder="at least 8 characters">                        
+                        </td>
+                        <td>
+                            <label class="detail">Password Repeat</label><br>
+                            <input type="password" placeholder="at least 8 characters">                        
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h4>2. Location</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <label class="detail">Address</label><br>
+                            <input type="text">                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="detail">City</label><br>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label class="detail">State</label><br>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label class="detail">Zip</label><br>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="detail">Phone</label><br>
+                            <input type="tel" placeholder="NNN-NNN-NNNN">                        
+                        </td>
+                        <td>
+                            <label class="detail">Country</label><br>
+                            <select class="country">
+                                <option value="Canada">Canada</option>
+                            </select>          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="continent">
+                            <label class="detail">Continent</label><br>
+                            <input id="northAmerica" type="radio" name="Continent">
+                            <label for="northAmerica">North America</label><br>
+                            <input id="europe" type="radio" name="Continent">
+                            <label for="europe">Europe</label><br>
+                            <input id="southAmerica" type="radio" name="Continent">
+                            <label for="southAmerica">South America</label><br>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+                
+            <section>
+                <h4>3. Personal Details</h4>
+                <hr>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="detail">Birth Day</label><br>
+                            <input type="date">                        
+                        </td>
+                        <td>
+                            <label class="detail">Favorite Color</label><br>
+                            <input type="color">                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label class="detail">Interest In Art</label><br>
+                            <div class="slider">
+                                <label>Minimal</label>
+                                <input type="range" min="0" max="100" value="50">
+                                <label>Love it!</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h4>4. All Done</h4>
+                <hr>
+
+                <input type="checkbox"><label>I agree to the <a href="#">Terms of the Site</a></label>
+                <br>
+                <button class="signUp" type="submit">
+                    <img src="images/button_ok.png">Sign me up!</button>
+            </section>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>All images are copyright to their owners. This is just a hypothetical site &#9400; 2014 Copyright Art Store</p>
+    </footer>
+
+</body>
+</html>
